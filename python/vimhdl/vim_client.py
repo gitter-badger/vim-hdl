@@ -61,6 +61,7 @@ class VimhdlClient(object):
 
         self._setup()
         self._waitForServerSetup()
+        self.requestUiMessages('ClientStart')
 
         import atexit
         atexit.register(self.shutdown)
